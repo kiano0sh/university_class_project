@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Engineering</title>
+    <link type="text/css" rel="stylesheet" href="{% static "css/materialize.min.css" %}" media="screen,projection"/>
+</head>
+<body>
+    <nav class="nav-wrapper blue-grey darken-2">
+        <div class="container">
+            <a href="/" class="brand-logo left">Software Engineering</a>
+            <ul>
+                <li class="right"><a href="{% url 'newApp:students_list' %}">Students</a></li>
+                <li class="right"><a href="{% url 'new_app:create_student' %}">Create Student</a></li>
+                <li class="right"><a href="{% url 'newApp:universities_list' %}">Universities</a></li>
+                <li class="right"><a href="{% url 'newApp:create_university' %}">Create University</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+<script type="text/javascript" src="{% static "js/materialize.min.js" %}"></script>
+</body>
+</html>

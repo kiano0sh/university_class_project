@@ -1,0 +1,22 @@
+{% extends "./base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <h1 class="btn z-depth-0 grey" style="margin-bottom: 60px;">Create Student</h1>
+    <div class="row">
+        <form class="col s12" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn" value="Create">
+        </form>
+    </div>
+{% endblock %}
+
+</body>
+</html>

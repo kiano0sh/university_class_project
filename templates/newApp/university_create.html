@@ -1,0 +1,13 @@
+{% extends "./base.html" %}
+
+
+{% block content %}
+    <div class="row">
+        <h1 class="btn z-depth-0 grey" style="margin-bottom: 60px;">Create University</h1>
+        <form class="col s12" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn" value="Create">
+        </form>
+    </div>
+{% endblock %}

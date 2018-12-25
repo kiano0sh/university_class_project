@@ -1,0 +1,10 @@
+{% extends "./base.html" %}
+
+{% block content %}
+    <h1 class="btn z-depth-0 grey">Universities</h1>
+    {% for object in object_list %}
+        <ul class="collection">
+            <li class="collection-item grey lighten-3">"{{ object.name }}" located in "{{ object.location }}"</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
